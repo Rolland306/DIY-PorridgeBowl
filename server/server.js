@@ -4,6 +4,8 @@ import favicon from 'serve-favicon'
 import dotenv from 'dotenv'
 
 // import the router from your routes file
+import bowlsRouter from './routes/bowls.js'
+import cors from 'cors'
 
 
 dotenv.config()
@@ -14,22 +16,25 @@ const app = express()
 
 app.use(express.json())
 
-if (process.env.NODE_ENV === 'development') {
-    app.use(favicon(path.resolve('../', 'client', 'public', 'lightning.png')))
-}
-else if (process.env.NODE_ENV === 'production') {
-    app.use(favicon(path.resolve('public', 'lightning.png')))
-    app.use(express.static('public'))
-}
+// if (process.env.NODE_ENV === 'development') {
+//     app.use(favicon(path.resolve('../', 'client', 'public', 'lightning.png')))
+// }
+// else if (process.env.NODE_ENV === 'production') {
+//     app.use(favicon(path.resolve('public', 'lightning.png')))
+//     app.use(express.static('public'))
+// }
 
 // specify the api path for the server to use
+app.use('/api/bowls', bowlsRouter)
+app.get('/', (req, res) => {
+    res.status(200).send('<h1 style="text-align: center; margin-top: 50px;">Bowls API</h1>')
+})
 
-
-if (process.env.NODE_ENV === 'production') {
-    app.get('/*', (_, res) =>
-        res.sendFile(path.resolve('public', 'index.html'))
-    )
-}
+// if (process.env.NODE_ENV === 'production') {
+//     app.get('/*', (_, res) =>
+//         res.sendFile(path.resolve('public', 'index.html'))
+//     )
+// }
 
 app.listen(PORT, () => {
     console.log(`server listening on http://localhost:${PORT}`)

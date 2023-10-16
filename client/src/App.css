@@ -1,12 +1,41 @@
 .app {
     background: url('./assets/background.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
+    background-position:center;
     background-attachment: fixed;
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
     padding-bottom: 50px;
+}
+.create-bowl-panel {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    padding: 5px 50px 30px;
+    display: flex;
+    flex-direction: row;
+    align-content: center
+}
+.horizontal-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.create-bowl-options{
+    display: flex;
+    align-items: center;
+    width: 70%
+}
+.bowl-options{
+    display: flex;
+    width: 400px;
+    height: auto;
+    justify-content: space-between;
+    align-items: center
+}
+.create-bowl-name{
+    display: flex;
+    align-content: flex-end;
 }

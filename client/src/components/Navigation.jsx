@@ -7,18 +7,18 @@ const Navigation = () => {
     <nav>
       <ul>
         <li>
-          <h1>Porridge Bowls 🏎️</h1>
+          <h1>Porridge Bowls 🥣</h1>
         </li>
       </ul>
 
       <ul>
         <li>
-          <a href="/create" role="button">
+          <a href="/" role="button">
             Customize
           </a>
         </li>
         <li>
-          <a href="/" role="button">
+          <a href="/viewbowls" role="button">
             View Bowls
           </a>
         </li>

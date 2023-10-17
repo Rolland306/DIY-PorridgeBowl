@@ -8,10 +8,11 @@
     --h1-color: var(--color);
     --h2-color: var(--color);
     --h3-color: var(--color);
+    --h5-color: var(--color);
     --card-background-color: rgba(0, 0, 0, 0.8);
     --card-sectionning-background-color: rgba(0, 0, 0, 0.8);
     --form-element-active-border-color: var(--color);
-    --form-element-placeholder-color: gray;
+    --form-element-placeholder-color: white;
 }
 
 #root h1 {

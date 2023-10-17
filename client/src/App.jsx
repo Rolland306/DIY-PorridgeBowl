@@ -10,11 +10,11 @@ import "./App.css";
 const App = () => {
   let element = useRoutes([
     {
-      path: "/create",
+      path: "/",
       element: <CreateBowl title="Porridge Bowls | Customize" />,
     },
     {
-      path: "/",
+      path: "/viewbowls",
       element: <ViewBowls title="Porridge Bowls | View" />,
     },
     {

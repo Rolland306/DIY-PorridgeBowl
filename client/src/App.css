@@ -25,7 +25,7 @@
 }
 .create-bowl-options{
     display: flex;
-    align-items: center;
+    justify-content: center;
     width: 70%
 }
 .bowl-options{
@@ -37,5 +37,13 @@
 }
 .create-bowl-name{
     display: flex;
-    align-content: flex-end;
+    justify-content:space-between;
+}
+.create-bowl-button{
+    margin-left: 15%;
+}
+.button-container, .property-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
